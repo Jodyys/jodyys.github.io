@@ -1,7 +1,7 @@
 // ===========================
 // TYPING EFFECT
 // ===========================
-const typingTexts = ['DevOps Engineer', 'Cloud Enthusiast', 'Kubernetes Operator', 'CI/CD Builder'];
+const typingTexts = ['DevOps Engineer', 'Cloud Enthusiast'];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
