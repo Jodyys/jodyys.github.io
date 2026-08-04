@@ -1,125 +1,110 @@
 // ===========================
-// TYPING EFFECT
-// ===========================
-const typingTexts = ['DevOps Engineer', 'Cloud Enthusiast'];
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const typingElement = document.getElementById('typingText');
-
-function typeEffect() {
-    const currentText = typingTexts[textIndex];
-
-    if (!isDeleting) {
-        typingElement.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-
-        if (charIndex === currentText.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 2000);
-            return;
-        }
-    } else {
-        typingElement.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-
-        if (charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % typingTexts.length;
-        }
-    }
-
-    const speed = isDeleting ? 40 : 80;
-    setTimeout(typeEffect, speed);
-}
-
-// Start typing after a short delay
-setTimeout(typeEffect, 800);
-
-// ===========================
-// NAVBAR SCROLL BEHAVIOR
-// ===========================
-const navbar = document.getElementById('navbar');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-
-    if (currentScroll > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-
-    lastScroll = currentScroll;
-});
-
-// ===========================
-// MOBILE NAV TOGGLE
+// NAVIGATION TOGGLE
 // ===========================
 const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
+const navMenu = document.getElementById('navMenu');
 
 navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('open');
-    navLinks.classList.toggle('open');
+    navMenu.classList.toggle('open');
 });
 
-// Close mobile nav when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        navMenu.classList.remove('open');
+    }
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-        navToggle.classList.remove('open');
-        navLinks.classList.remove('open');
+        navMenu.classList.remove('open');
     });
 });
 
 // ===========================
-// SCROLL ANIMATIONS
+// TERMINAL LOG SIMULATION
 // ===========================
-const animateElements = document.querySelectorAll('[data-animate]');
+const terminalLogs = document.getElementById('terminalLogs');
 
-const observerOptions = {
-    root: null,
-    rootMargin: '0px 0px -80px 0px',
-    threshold: 0.1
-};
+const logs = [
+    '<span class="mac-prompt">$</span><span class="mac-cmd">cat /etc/profile</span>',
+    '<br>',
+    '<span class="mac-key">name:</span><span class="mac-val">Devin Jodiyudanto</span>',
+    '<br>',
+    '<span class="mac-key">role:</span><span class="mac-val" id="role-text"></span><span id="role-cursor" style="color: #c9d1d9; opacity: 1;">|</span>',
+    '<br>',
+    '<span class="mac-key">location:</span><span class="mac-val">Bekasi, Indonesia</span>',
+    '<br>',
+    '<span class="mac-key">status:</span><span class="mac-status-pill">available</span>'
+];
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            // Stagger animation for elements that appear together
-            setTimeout(() => {
-                entry.target.classList.add('animate-in');
-            }, index * 100);
-            observer.unobserve(entry.target);
+let logIndex = 0;
+
+function appendLog() {
+    if (logIndex >= logs.length) {
+        startRoleAnimation();
+        return; 
+    }
+
+    const logEl = document.createElement('div');
+    if (logs[logIndex] === '<br>') {
+        logEl.style.height = '14px'; 
+    } else {
+        logEl.innerHTML = logs[logIndex];
+    }
+    
+    terminalLogs.appendChild(logEl);
+    terminalLogs.scrollTop = terminalLogs.scrollHeight;
+
+    logIndex++;
+    
+    const delay = Math.random() * 300 + 200;
+    setTimeout(appendLog, delay);
+}
+
+const roles = ["DevOps Engineer", "Cloud Enthusiast"];
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function startRoleAnimation() {
+    const roleEl = document.getElementById("role-text");
+    const cursorEl = document.getElementById("role-cursor");
+    
+    // Blinking cursor
+    setInterval(() => {
+        cursorEl.style.opacity = cursorEl.style.opacity === "0" ? "1" : "0";
+    }, 500);
+
+    function type() {
+        const currentRole = roles[roleIndex];
+        
+        if (isDeleting) {
+            roleEl.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            roleEl.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
         }
-    });
-}, observerOptions);
-
-animateElements.forEach(el => observer.observe(el));
-
-// ===========================
-// ACTIVE NAV LINK ON SCROLL
-// ===========================
-const sections = document.querySelectorAll('.section, .hero');
-const navLinkElements = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
+        
+        let typeSpeed = isDeleting ? 50 : 100;
+        
+        if (!isDeleting && charIndex === currentRole.length) {
+            typeSpeed = 2000; // Pause at end of word
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typeSpeed = 500; // Pause before typing new word
         }
-    });
+        
+        setTimeout(type, typeSpeed);
+    }
+    
+    type();
+}
 
-    navLinkElements.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
+// Clear initial HTML logs and start
+terminalLogs.innerHTML = '';
+setTimeout(appendLog, 800);
