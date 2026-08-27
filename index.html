@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Devin Jodiyudanto - DevOps Engineer Portfolio">
+    
+    <!-- Open Graph Meta Tags untuk Preview (LinkedIn, WhatsApp, dll) -->
+    <meta property="og:title" content="Devin Jodiyudanto | DevOps Engineer">
+    <meta property="og:description" content="DevOps Engineer with hands-on experience in Kubernetes, CI/CD pipelines, and Infrastructure as Code.">
+    <meta property="og:image" content="preview.jpg">
+    <meta property="og:type" content="website">
+
     <title>Devin Jodiyudanto | DevOps Engineer</title>
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -66,7 +73,7 @@
                     </div>
 
                     <!-- SERVER STATUS WIDGET -->
-                    <div style="background: var(--accent-green); border: var(--border-width) solid var(--border); box-shadow: var(--shadow-small); padding: 16px; border-radius: 12px; font-family: var(--font-mono); font-weight: 700; transform: rotate(1deg);">
+                    <div class="float-anim" style="background: var(--accent-green); border: var(--border-width) solid var(--border); box-shadow: var(--shadow-small); padding: 16px; border-radius: 12px; font-family: var(--font-mono); font-weight: 700;">
                         <div style="font-size: 0.8rem; margin-bottom: 8px; border-bottom: 2px solid var(--border); padding-bottom: 4px;">STATUS_CHECK</div>
                         <div style="font-size: 1.5rem; letter-spacing: -1px;"><i class="fa-solid fa-heart-pulse"></i> ALL SYSTEMS GO</div>
                         <div style="font-size: 0.75rem; margin-top: 8px;">UPTIME: 99.99%</div>
@@ -102,8 +109,8 @@
 
     <!-- ABOUT ME SECTION -->
     <section class="section-wrapper" id="about">
-        <h2 class="section-header">001 // ABOUT_ME</h2>
-        <div class="card" style="border-top: 8px solid var(--accent-purple); font-size: 1.1rem; line-height: 1.8;">
+        <h2 class="section-header reveal">001 // ABOUT_ME</h2>
+        <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-purple); font-size: 1.1rem; line-height: 1.8;">
             <p>
                 DevOps Engineer with hands-on experience managing Kubernetes environments on Google Kubernetes Engine (GKE) and Amazon EKS, implementing Infrastructure as Code with Terraform, CI/CD pipelines with Azure DevOps and Jenkins, and automating infrastructure using Docker and Ansible. Experienced in Kubernetes troubleshooting, infrastructure monitoring, Linux (Ubuntu) administration, and DevSecOps practices with cloud-native technologies.
             </p>
@@ -112,9 +119,9 @@
 
     <!-- SKILLS SECTION -->
     <section class="section-wrapper" id="skills">
-        <h2 class="section-header">002 // TECH_STACK</h2>
+        <h2 class="section-header reveal">002 // TECH_STACK</h2>
         <div class="grid-3">
-            <div class="card" style="border-top: 8px solid var(--accent-orange);">
+            <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-orange);">
                 <h3 style="font-size: 1.2rem; margin-bottom: 16px; text-transform: uppercase;"><i class="fa-solid fa-cloud"></i> Cloud & Container</h3>
                 <div>
                     <span class="tech-pill"><i class="devicon-amazonwebservices-plain colored"></i> AWS (EKS, EC2)</span>
@@ -125,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="card" style="border-top: 8px solid var(--accent-green);">
+            <div class="card reveal delay-200" style="border-top: 8px solid var(--accent-green);">
                 <h3 style="font-size: 1.2rem; margin-bottom: 16px; text-transform: uppercase;"><i class="fa-solid fa-code-branch"></i> CI/CD & <span style="display: inline-block;">Infrastructure as Code</span></h3>
                 <div>
                     <span class="tech-pill"><i class="devicon-terraform-plain colored"></i> Terraform</span>
@@ -136,7 +143,7 @@
                 </div>
             </div>
 
-            <div class="card" style="border-top: 8px solid var(--accent-purple);">
+            <div class="card reveal delay-300" style="border-top: 8px solid var(--accent-purple);">
                 <h3 style="font-size: 1.2rem; margin-bottom: 16px; text-transform: uppercase;"><i class="fa-solid fa-shield-halved"></i> DevSecOps</h3>
                 <div>
                     <span class="tech-pill"><i class="devicon-sonarqube-plain colored"></i> SonarQube</span>
@@ -148,7 +155,7 @@
                 </div>
             </div>
 
-            <div class="card" style="border-top: 8px solid var(--accent-cyan);">
+            <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-cyan);">
                 <h3 style="font-size: 1.2rem; margin-bottom: 16px; text-transform: uppercase;"><i class="fa-solid fa-chart-line"></i> Monitoring</h3>
                 <div>
                     <span class="tech-pill"><i class="devicon-prometheus-original colored"></i> Prometheus</span>
@@ -159,7 +166,7 @@
                 </div>
             </div>
 
-            <div class="card" style="border-top: 8px solid var(--border);">
+            <div class="card reveal delay-200" style="border-top: 8px solid var(--border);">
                 <h3 style="font-size: 1.2rem; margin-bottom: 16px; text-transform: uppercase;"><i class="fa-solid fa-terminal"></i> OS & Scripting</h3>
                 <div>
                     <span class="tech-pill"><i class="devicon-ubuntu-plain colored"></i> Linux (Ubuntu)</span>
@@ -171,14 +178,14 @@
 
     <!-- EXPERIENCE SECTION -->
     <section class="section-wrapper" id="experience">
-        <h2 class="section-header">003 // EXP_LOGS</h2>
+        <h2 class="section-header reveal">003 // EXP_LOGS</h2>
         <div class="grid-2">
-            <div class="card" style="background: var(--accent-orange); color: white;">
+            <div class="card reveal delay-100" style="background: var(--accent-orange); color: white;">
                 <div class="card-tag" style="background: var(--bg-card); color: var(--border);">JUL 2026 - PRESENT</div>
                 <h3 style="font-size: 1.5rem; margin-bottom: 8px;">DevOps Engineer</h3>
                 <h4 style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 16px;">PT Link Net Tbk</h4>
                 <ul style="font-family: var(--font-mono); font-size: 0.9rem; padding-left: 20px; line-height: 1.8;">
-                    <li>Managed production Kubernetes clusters on Google Kubernetes Engine (GKE) and Amazon EKS.</li>
+                    <li>Managed production Kubernetes clusters on Google Kubernetes Engine (GKE), Amazon EKS and Tencent Kubernetes Engine (TKE).</li>
                     <li>Maintained and updated Azure DevOps CI/CD pipelines for application deployment.</li>
                     <li>Collaborated with developers to resolve deployment issues and maintain application availability.</li>
                     <li>Managed Kubernetes resources including Deployments, Services, Ingress, ConfigMaps, Secrets, and Azure Key Vault integration.</li>
@@ -187,7 +194,7 @@
                 </ul>
             </div>
             
-            <div class="card">
+            <div class="card reveal delay-200">
                 <div class="card-tag">AUG 2025 - JUL 2026</div>
                 <h3 style="font-size: 1.5rem; margin-bottom: 8px;">DevOps Engineer</h3>
                 <h4 style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 16px;">PT Buana Media Teknologi</h4>
@@ -204,9 +211,9 @@
 
     <!-- LAB PROJECTS SECTION -->
     <section class="section-wrapper" id="projects">
-        <h2 class="section-header">004 // LAB_PROJECTS</h2>
+        <h2 class="section-header reveal">004 // LAB_PROJECTS</h2>
         <div class="grid-2">
-            <div class="card" style="border-top: 8px solid var(--accent-cyan); position: relative;">
+            <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-cyan); position: relative;">
                 <div class="card-tag" style="background: var(--accent-green);">DEVSECOPS / CI</div>
                 <a href="https://github.com/jodyys/Travel-Destination-App.git" target="_blank" class="github-link-top"><i class="fa-brands fa-github"></i></a>
                 <h3 style="font-size: 1.5rem; margin-bottom: 8px; padding-right: 32px;"><i class="fa-solid fa-plane-departure"></i> Travel Destination Hub</h3>
@@ -217,7 +224,7 @@
                 </ul>
             </div>
 
-            <div class="card" style="border-top: 8px solid var(--accent-purple); position: relative;">
+            <div class="card reveal delay-200" style="border-top: 8px solid var(--accent-purple); position: relative;">
                 <div class="card-tag" style="background: var(--accent-cyan);">K8S / CD</div>
                 <a href="https://github.com/jodyys/Track-App.git" target="_blank" class="github-link-top"><i class="fa-brands fa-github"></i></a>
                 <h3 style="font-size: 1.5rem; margin-bottom: 8px; padding-right: 32px;"><i class="fa-solid fa-route"></i> Track App</h3>
@@ -232,17 +239,22 @@
 
     <!-- EDUCATION & CERTS SECTION -->
     <section class="section-wrapper" id="education">
-        <h2 class="section-header">005 // EDU_CERTS</h2>
+        <h2 class="section-header reveal">005 // EDU_CERTS</h2>
         <div class="grid-3">
-            <div class="card" style="border-top: 8px solid var(--accent-orange);">
+            <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-orange);">
                 <div class="card-tag" style="background: var(--bg-card); color: var(--border);">DEGREE</div>
+                
+                <h3 style="font-size: 1.2rem; margin-bottom: 8px;"><i class="fa-solid fa-graduation-cap"></i> Universitas Terbuka</h3>
+                <h4 style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 8px;">Bachelor's Degree, Sistem Informasi</h4>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 24px;">AUG 2026 - PRESENT</div>
+
                 <h3 style="font-size: 1.2rem; margin-bottom: 8px;"><i class="fa-solid fa-graduation-cap"></i> Universitas Bina Sarana Informatika</h3>
                 <h4 style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 8px;">Associate Degree in Information Systems</h4>
                 <div style="font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 4px;">AUG 2018 - NOV 2021</div>
                 <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">GPA: 3.54 / 4.00</div>
             </div>
 
-            <div class="card" style="border-top: 8px solid var(--accent-cyan);">
+            <div class="card reveal delay-200" style="border-top: 8px solid var(--accent-cyan);">
                 <div class="card-tag" style="background: var(--accent-orange); color: white;">BOOTCAMP</div>
                 <h3 style="font-size: 1.2rem; margin-bottom: 16px;"><i class="fa-solid fa-chalkboard-user"></i> Training Programs</h3>
                 <div style="margin-bottom: 12px;">
@@ -257,7 +269,7 @@
                 </div>
             </div>
 
-            <div class="card" style="border-top: 8px solid var(--accent-green);">
+            <div class="card reveal delay-300" style="border-top: 8px solid var(--accent-green);">
                 <div class="card-tag" style="background: var(--accent-cyan); color: var(--border);">BADGES</div>
                 <h3 style="font-size: 1.2rem; margin-bottom: 16px;"><i class="fa-solid fa-award"></i> Certifications</h3>
                 <ul style="font-family: var(--font-mono); font-size: 0.85rem; padding-left: 20px; line-height: 1.8;">
@@ -270,7 +282,7 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section class="section-wrapper" id="contact" style="margin-bottom: 100px;">
+    <section class="section-wrapper reveal delay-100" id="contact" style="margin-bottom: 100px;">
         <div class="card" style="background: var(--accent-green); text-align: center;">
             <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 16px; text-transform: uppercase;">Let's Connect</h2>
             <p style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 24px;">Always open for new opportunities, collaborations, and discussions.</p>
