@@ -425,6 +425,17 @@ a { color: inherit; text-decoration: none; }
     box-shadow: 12px 12px 0px var(--accent-cyan);
     border-color: var(--accent-cyan);
 }
+
+/* Floating animation for Tech Stack cards */
+#skills .card.active {
+    animation: float 6s ease-in-out infinite;
+}
+#skills .card.active:hover {
+    animation: none;
+}
+#skills .card.delay-100.active { animation-delay: 1.1s; }
+#skills .card.delay-200.active { animation-delay: 1.3s; }
+#skills .card.delay-300.active { animation-delay: 1.5s; }
 .card-tag {
     position: absolute;
     top: -12px; right: 24px;
@@ -505,9 +516,9 @@ a { color: inherit; text-decoration: none; }
 .delay-300 { transition-delay: 300ms; }
 
 @keyframes float {
-    0% { transform: translateY(0px) rotate(1deg); }
-    50% { transform: translateY(-8px) rotate(2deg); }
-    100% { transform: translateY(0px) rotate(1deg); }
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
 }
 .float-anim {
     animation: float 5s ease-in-out infinite;
