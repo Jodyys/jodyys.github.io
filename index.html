@@ -4,279 +4,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Engineer Resume</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Devin Jodiyudanto - DevOps Engineer Portfolio">
+    
+    <!-- Open Graph Meta Tags untuk Preview (LinkedIn, WhatsApp, dll) -->
+    <meta property="og:title" content="Devin Jodiyudanto | DevOps Engineer">
+    <meta property="og:description" content="DevOps Engineer with hands-on experience in Kubernetes, CI/CD pipelines, and Infrastructure as Code.">
+    <meta property="og:image" content="preview.jpg">
+    <meta property="og:type" content="website">
+
+    <title>Devin Jodiyudanto | DevOps Engineer</title>
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="top-bar no-print">
-        <div class="container top-bar-content">
-            <div class="badge-status">
-                <i class="fa-solid fa-circle-check"></i> ATS & HR Revised Version
-            </div>
-            <div class="actions">
-                <button onclick="window.print()" class="btn btn-primary"><i class="fa-solid fa-print"></i> Save / Print
-                    PDF</button>
-                <button onclick="copyMarkdownResume()" class="btn btn-secondary" id="copyBtn"><i
-                        class="fa-solid fa-copy"></i> Copy Raw Markdown</button>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-brand">
+            <div class="nav-brand-dot"></div>
+            DJ
+        </a>
+        
+        <div class="nav-toggle" id="navToggle">
+            <span style="display: flex; align-items: center; gap: 8px;"><div style="width: 10px; height: 10px; background-color: var(--accent-green); border-radius: 50%;"></div> MENU</span>
+            <div class="nav-toggle-icon">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </div>
 
-    <main class="cv-page">
-        <!-- HEADER -->
-        <header class="cv-header">
-            <h1 class="candidate-name">DEVIN JODIYUDANTO</h1>
-            <h2 class="candidate-title">DevOps Engineer | Cloud Engineer</h2>
-            <div class="contact-info">
-                <span><i class="fa-solid fa-location-dot"></i> Bekasi, Indonesia</span>
-                <span><i class="fa-solid fa-envelope"></i> <a href="mailto:devinjody@gmail.com">devinjody@gmail.com</a></span>
-                <span><i class="fa-solid fa-phone"></i> <a href="https://wa.me/6283872502379"
-                        target="_blank">083872502379</a></span>
-                <span><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/devinjodiyudanto"
-                        target="_blank">linkedin.com/in/devinjodiyudanto</a></span>
-                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/jodyys"
-                        target="_blank">github.com/jodyys</a></span>
+        <div class="nav-menu" id="navMenu">
+            <a href="#about">01 // ABOUT</a>
+            <a href="#skills">02 // STACK</a>
+            <a href="#experience">03 // EXP</a>
+            <a href="#projects">04 // PROJECTS</a>
+            <a href="#education">05 // EDU</a>
+            <a href="#contact" style="background: var(--accent-orange); color: var(--bg-primary); margin-top: 8px;">CONNECT</a>
+        </div>
+    </nav>
+
+    <!-- POSTER HERO -->
+    <section class="hero-wrapper" id="hero">
+        <div class="poster-frame">
+            <!-- HEADER BAR -->
+            <div class="poster-header">
+                <span class="poster-badge-left">SYSTEM_OVERVIEW</span>
+                <span class="poster-badge-right">LOC: BEKASI, ID</span>
             </div>
-        </header>
 
-        <!-- PROFESSIONAL SUMMARY -->
-        <section class="cv-section">
-            <h3 class="section-title"><i class="fa-solid fa-user-tie no-print"></i> Professional Summary</h3>
-            <p class="summary-text">
-                <strong>DevOps Engineer</strong> with hands-on experience managing Kubernetes environments on Google
-                Kubernetes Engine (GKE) and Amazon EKS, CI/CD
-                pipelines with Azure DevOps and Jenkins, and
-                automating infrastructure using Docker and Ansible. Experienced in Kubernetes troubleshooting,
-                infrastructure monitoring, Linux (Ubuntu) administration, and DevSecOps practices with cloud-native
-                technologies.
+            <div class="poster-body">
+                <!-- WIDGET COLUMN (LEFT) -->
+                <div class="widget-column">
+                    <!-- MAC TERMINAL WIDGET -->
+                    <div class="mac-terminal">
+                        <div class="mac-term-header">
+                            <div class="mac-term-dots">
+                                <span class="mac-term-dot mac-dot-r"></span>
+                                <span class="mac-term-dot mac-dot-y"></span>
+                                <span class="mac-term-dot mac-dot-g"></span>
+                            </div>
+                            <span class="mac-term-title">jodyys@portfolio:~</span>
+                        </div>
+                        <div class="mac-term-body" id="terminalLogs">
+                        </div>
+                    </div>
+
+                    <!-- SERVER STATUS WIDGET -->
+                    <div class="float-anim" style="background: var(--accent-green); border: var(--border-width) solid var(--border); box-shadow: var(--shadow-small); padding: 16px; border-radius: 12px; font-family: var(--font-mono); font-weight: 700;">
+                        <div style="font-size: 0.8rem; margin-bottom: 8px; border-bottom: 2px solid var(--border); padding-bottom: 4px;">STATUS_CHECK</div>
+                        <div style="font-size: 1.5rem; letter-spacing: -1px;"><i class="fa-solid fa-heart-pulse"></i> ALL SYSTEMS GO</div>
+                        <div style="font-size: 0.75rem; margin-top: 8px;">UPTIME: 99.99%</div>
+                    </div>
+                </div>
+
+                <!-- TYPOGRAPHY COLUMN (RIGHT) -->
+                <div class="typo-column">
+                    <div class="typo-tags">
+                        <span class="typo-tag">DEVOPS ENGINEER</span>
+                        <span class="typo-tag alt">CLOUD ENTHUSIAST</span>
+                    </div>
+
+                    <div class="typo-headline">
+                        <h1>AUTOMATING &</h1>
+                        <h1><span class="highlight-box">SCALING</span></h1>
+                        <h1>INFRASTRUCTURE.</h1>
+                    </div>
+
+                    <div class="typo-desc">
+                        Hi, I'm Devin Jodiyudanto. Building reliable infrastructure, automating deployments, and keeping production running smoothly.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTION BAR -->
+            <div class="action-bar">
+                <a href="#projects" class="btn-brutal primary"><i class="fa-solid fa-server"></i> VIEW PROJECTS</a>
+                <a href="CV_Devin_Jodiyudanto.pdf" target="_blank" class="btn-brutal"><i class="fa-solid fa-file-pdf"></i> DOWNLOAD CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="section-wrapper" id="about">
+        <h2 class="section-header reveal">001 // ABOUT_ME</h2>
+        <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-purple); font-size: 1.1rem; line-height: 1.8;">
+            <p>
+                DevOps Engineer with hands-on experience managing Kubernetes environments on Google Kubernetes Engine (GKE) and Amazon EKS, implementing Infrastructure as Code with Terraform, CI/CD pipelines with Azure DevOps and Jenkins, and automating infrastructure using Docker and Ansible. Experienced in Kubernetes troubleshooting, infrastructure monitoring, Linux (Ubuntu) administration, and DevSecOps practices with cloud-native technologies.
             </p>
-        </section>
+        </div>
+    </section>
 
-        <!-- SKILLS MATRIX -->
-        <section class="cv-section">
-            <h3 class="section-title"><i class="fa-solid fa-layer-group no-print"></i> Technical Skills</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <span class="skill-label">Cloud Platforms:</span>
-                    <span class="skill-items">Amazon Web Services (EKS, EC2, IAM, VPC), Google Cloud Platform
-                        (GKE)</span>
-                </div>
-                <div class="skill-category">
-                    <span class="skill-label">Container Orchestration:</span>
-                    <span class="skill-items">Kubernetes (GKE, EKS, K3s), Docker, Docker Compose</span>
-                </div>
-                <div class="skill-category">
-                    <span class="skill-label">IaC & CI/CD Pipelines:</span>
-                    <span class="skill-items">Terraform, Azure DevOps Pipelines, Jenkins, Ansible, Git, Docker
-                        Hub</span>
-                </div>
-                <div class="skill-category">
-                    <span class="skill-label">OS & Scripting:</span>
-                    <span class="skill-items">Linux (Ubuntu), Bash Scripting</span>
-                </div>
-                <div class="skill-category">
-                    <span class="skill-label">DevSecOps & Security:</span>
-                    <span class="skill-items">SonarQube (SAST), Trivy, Gitleaks, Azure Key Vault, FortiGate Firewall,
-                        FortiWeb</span>
-                </div>
-                <div class="skill-category">
-                    <span class="skill-label">Monitoring & Logging:</span>
-                    <span class="skill-items">Prometheus, Grafana, Kibana, Node Exporter, cAdvisor</span>
+    <!-- SKILLS SECTION -->
+    <section class="section-wrapper" id="skills">
+        <h2 class="section-header reveal">002 // TECH_STACK</h2>
+        <div class="grid-3">
+            <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-orange);">
+                <h3 style="font-size: 1.2rem; margin-bottom: 16px; text-transform: uppercase;"><i class="fa-solid fa-cloud"></i> Cloud & Container</h3>
+                <div>
+                    <span class="tech-pill"><i class="devicon-amazonwebservices-plain colored"></i> AWS (EKS, EC2)</span>
+                    <span class="tech-pill"><i class="devicon-googlecloud-plain colored"></i> GCP (GKE)</span>
+                    <span class="tech-pill"><i class="fa-solid fa-cloud"></i> Tencent Cloud (TKE)</span>
+                    <span class="tech-pill"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</span>
+                    <span class="tech-pill"><i class="devicon-docker-plain colored"></i> Docker</span>
+                    <span class="tech-pill"><i class="devicon-docker-plain colored"></i> Docker Compose</span>
                 </div>
             </div>
-        </section>
 
-        <!-- WORK EXPERIENCE -->
-        <section class="cv-section">
-            <h3 class="section-title"><i class="fa-solid fa-briefcase no-print"></i> Work Experience</h3>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <div>
-                        <h4 class="company-name">PT Link Net Tbk</h4>
-                        <span class="role-title">DevOps Engineer</span>
-                    </div>
-                    <div class="exp-meta">
-                        <span class="location">Tangerang, Indonesia</span>
-                        <span class="dates">July 2026 – Present</span>
-                    </div>
+            <div class="card reveal delay-200" style="border-top: 8px solid var(--accent-green);">
+                <h3 style="font-size: 1.2rem; margin-bottom: 16px; text-transform: uppercase;"><i class="fa-solid fa-code-branch"></i> CI/CD & <span style="display: inline-block;">Infrastructure as Code</span></h3>
+                <div>
+                    <span class="tech-pill"><i class="devicon-terraform-plain colored"></i> Terraform</span>
+                    <span class="tech-pill"><i class="devicon-azure-plain colored"></i> Azure DevOps</span>
+                    <span class="tech-pill"><i class="devicon-jenkins-line colored"></i> Jenkins</span>
+                    <span class="tech-pill"><i class="devicon-ansible-plain colored"></i> Ansible</span>
+                    <span class="tech-pill"><i class="devicon-git-plain colored"></i> Git</span>
                 </div>
-                <ul class="bullet-list">
-                    <li>Managed production Kubernetes clusters on <strong>Google Kubernetes
-                            Engine (GKE)</strong>, <strong>Amazon EKS</strong> and <strong>Tencent Kubernetes Engine (TKE)</strong>.</li>
-                    <li>Maintained and updated <strong>Azure DevOps</strong> CI/CD pipelines for application
-                        deployment.
-                    </li>
-                    <li>Collaborated with developers to resolve deployment issues and maintain application availability.
-                    </li>
-                    <li>Managed Kubernetes resources including Deployments, Services,
-                        Ingress, ConfigMaps, Secrets, and <strong>Azure Key Vault</strong> integration.
-                    </li>
-                    <li>Troubleshot production issues including
-                        <code>CrashLoopBackOff</code>, <code>ImagePullBackOff</code>, and
-                        <code>CreateContainerConfigError</code>.
-                    </li>
-                    <li>Performed Kubernetes operational support including rolling updates, pod
-                        restarts, deployment validation, and application configuration changes.</li>
+            </div>
+
+            <div class="card reveal delay-300" style="border-top: 8px solid var(--accent-purple);">
+                <h3 style="font-size: 1.2rem; margin-bottom: 16px; text-transform: uppercase;"><i class="fa-solid fa-shield-halved"></i> DevSecOps</h3>
+                <div>
+                    <span class="tech-pill"><i class="devicon-sonarqube-plain colored"></i> SonarQube</span>
+                    <span class="tech-pill"><i class="fa-solid fa-shield-virus"></i> Trivy</span>
+                    <span class="tech-pill"><i class="fa-solid fa-key"></i> Gitleaks</span>
+                    <span class="tech-pill"><i class="fa-solid fa-vault"></i> Azure Key Vault</span>
+                    <span class="tech-pill"><i class="fa-solid fa-fire-extinguisher"></i> FortiGate</span>
+                    <span class="tech-pill"><i class="fa-solid fa-shield-halved"></i> FortiWeb</span>
+                </div>
+            </div>
+
+            <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-cyan);">
+                <h3 style="font-size: 1.2rem; margin-bottom: 16px; text-transform: uppercase;"><i class="fa-solid fa-chart-line"></i> Monitoring</h3>
+                <div>
+                    <span class="tech-pill"><i class="devicon-prometheus-original colored"></i> Prometheus</span>
+                    <span class="tech-pill"><i class="devicon-grafana-original colored"></i> Grafana</span>
+                    <span class="tech-pill"><i class="fa-solid fa-chart-pie"></i> Kibana</span>
+                    <span class="tech-pill"><i class="fa-solid fa-server"></i> Node Exporter</span>
+                    <span class="tech-pill"><i class="fa-solid fa-microchip"></i> cAdvisor</span>
+                </div>
+            </div>
+
+            <div class="card reveal delay-200" style="border-top: 8px solid var(--border);">
+                <h3 style="font-size: 1.2rem; margin-bottom: 16px; text-transform: uppercase;"><i class="fa-solid fa-terminal"></i> OS & Scripting</h3>
+                <div>
+                    <span class="tech-pill"><i class="devicon-ubuntu-plain colored"></i> Linux (Ubuntu)</span>
+                    <span class="tech-pill"><i class="devicon-bash-plain colored"></i> Bash Scripting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section-wrapper" id="experience">
+        <h2 class="section-header reveal">003 // EXP_LOGS</h2>
+        <div class="grid-2">
+            <div class="card reveal delay-100" style="background: var(--accent-orange); color: white;">
+                <div class="card-tag" style="background: var(--bg-card); color: var(--border);">JUL 2026 - PRESENT</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 8px;">DevOps Engineer</h3>
+                <h4 style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 16px;">PT Link Net Tbk</h4>
+                <ul style="font-family: var(--font-mono); font-size: 0.9rem; padding-left: 20px; line-height: 1.8;">
+                    <li>Managed production Kubernetes clusters on Google Kubernetes Engine (GKE), Amazon EKS and Tencent Kubernetes Engine (TKE).</li>
+                    <li>Maintained and updated Azure DevOps CI/CD pipelines for application deployment.</li>
+                    <li>Collaborated with developers to resolve deployment issues and maintain application availability.</li>
+                    <li>Managed Kubernetes resources including Deployments, Services, Ingress, ConfigMaps, Secrets, and Azure Key Vault integration.</li>
+                    <li>Troubleshot production issues including CrashLoopBackOff, ImagePullBackOff, and CreateContainerConfigError.</li>
+                    <li>Performed Kubernetes operational support including rolling updates, pod restarts, deployment validation, and application configuration changes.</li>
                 </ul>
             </div>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <div>
-                        <h4 class="company-name">PT Buana Media Teknologi</h4>
-                        <span class="role-title">DevOps Engineer</span>
-                    </div>
-                    <div class="exp-meta">
-                        <span class="location">Jakarta, Indonesia</span>
-                        <span class="dates">August 2025 – July 2026</span>
-                    </div>
-                </div>
-                <ul class="bullet-list">
-                    <li>Set up and configured system monitoring and log analytics using <strong>Prometheus, Grafana,
-                            Kibana, FortiWeb</strong>, and <strong>FortiGate</strong> for infrastructure
-                        observability.</li>
-                    <li>Automated the deployment of monitoring agents (<strong>Node Exporter, cAdvisor</strong>) across
-                        7 Linux servers using <strong>Ansible</strong> playbooks.</li>
-                    <li>Configured and managed <strong>FortiGate</strong> firewall security, web filtering rules,
-                        security profiles, firmware updates, and Data Loss Prevention (DLP) policies.</li>
-                    <li>Configured <strong>Prometheus</strong> alerting rules and customized <strong>Grafana</strong>
-                        dashboards for real-time
-                        infrastructure threshold monitoring.</li>
-                    <li>Wrote <strong>Bash</strong> scripts and cron jobs for scheduled NAS
-                        backups, supporting data integrity and disaster recovery readiness.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- LAB PROJECTS -->
-        <section class="cv-section force-page-break">
-            <h3 class="section-title"><i class="fa-solid fa-flask no-print"></i> DevSecOps & Cloud Lab Projects</h3>
-
-            <div class="project-item">
-                <div class="exp-header">
-                    <h4 class="project-name">Travel Destination Hub – DevSecOps CI Lab Project</h4>
-                    <span class="project-link"><i class="fa-brands fa-github"></i> <a
-                            href="https://github.com/jodyys/Travel-Destination-App.git"
-                            target="_blank">github.com/jodyys/Travel-Destination-App</a></span>
-                </div>
-                <ul class="bullet-list">
-                    <li>Built and containerized a full-stack application with React, Node.js,
-                        and PostgreSQL using Docker and Docker Compose.</li>
-                    <li>Built an automated Jenkins CI pipeline incorporating security scanning tools:
-                        <strong>SonarQube</strong> for SAST code quality, <strong>Gitleaks</strong> for secret
-                        detection, and <strong>Trivy</strong> for container vulnerability checks.
-                    </li>
-                    <li>Configured automatic building and pushing of Docker images to Docker Hub registry
-                        upon successful pipeline completion.</li>
-                </ul>
-                <div class="tech-tag-container">
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">Jenkins</span>
-                    <span class="tech-tag">SonarQube</span>
-                    <span class="tech-tag">Trivy</span>
-                    <span class="tech-tag">Gitleaks</span>
-                </div>
-            </div>
-
-            <div class="project-item">
-                <div class="exp-header">
-                    <h4 class="project-name">Track App – CI/CD & Kubernetes Lab Project</h4>
-                    <span class="project-link"><i class="fa-brands fa-github"></i> <a
-                            href="https://github.com/jodyys/Track-App.git"
-                            target="_blank">github.com/jodyys/Track-App</a></span>
-                </div>
-                <ul class="bullet-list">
-                    <li>Built end-to-end CI/CD pipelines using
-                        Jenkins for deployment to lightweight Kubernetes (K3s) environments.</li>
-                    <li>Deployed and managed application workloads in K3s cluster, ensuring proper ingress routing and
-                        resource isolation.</li>
-                    <li>Set up infrastructure monitoring using <strong>Prometheus</strong> and custom
-                        <strong>Grafana</strong> dashboards with Node Exporter for host metrics.
-                    </li>
-                </ul>
-                <div class="tech-tag-container">
-                    <span class="tech-tag">Kubernetes (K3s)</span>
-                    <span class="tech-tag">Jenkins</span>
-                    <span class="tech-tag">Prometheus</span>
-                    <span class="tech-tag">Grafana</span>
-                    <span class="tech-tag">Node Exporter</span>
-                    <span class="tech-tag">Docker</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- EDUCATION -->
-        <section class="cv-section">
-            <h3 class="section-title"><i class="fa-solid fa-graduation-cap no-print"></i> Education</h3>
             
-            <div class="exp-header" style="margin-bottom: 1rem;">
+            <div class="card reveal delay-200">
+                <div class="card-tag">AUG 2025 - JUL 2026</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 8px;">DevOps Engineer</h3>
+                <h4 style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 16px;">PT Buana Media Teknologi</h4>
+                <ul style="font-family: var(--font-mono); font-size: 0.9rem; padding-left: 20px; line-height: 1.8;">
+                    <li>Set up and configured system monitoring and log analytics using Prometheus, Grafana, Kibana, FortiWeb, and FortiGate for infrastructure observability.</li>
+                    <li>Automated the deployment of monitoring agents (Node Exporter, cAdvisor) across 7 Linux servers using Ansible playbooks.</li>
+                    <li>Configured and managed FortiGate firewall security, web filtering rules, security profiles, firmware updates, and Data Loss Prevention (DLP) policies.</li>
+                    <li>Configured Prometheus alerting rules and customized Grafana dashboards for real-time infrastructure threshold monitoring.</li>
+                    <li>Wrote Bash scripts and cron jobs for scheduled NAS backups, supporting data integrity and disaster recovery readiness.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAB PROJECTS SECTION -->
+    <section class="section-wrapper" id="projects">
+        <h2 class="section-header reveal">004 // LAB_PROJECTS</h2>
+        <div class="grid-2">
+            <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-cyan); position: relative;">
+                <div class="card-tag" style="background: var(--accent-green);">DEVSECOPS / CI</div>
+                <a href="https://github.com/jodyys/Travel-Destination-App.git" target="_blank" class="github-link-top"><i class="fa-brands fa-github"></i></a>
+                <h3 style="font-size: 1.5rem; margin-bottom: 8px; padding-right: 32px;"><i class="fa-solid fa-plane-departure"></i> Travel Destination Hub</h3>
+                <ul style="font-family: var(--font-mono); font-size: 0.9rem; padding-left: 20px; line-height: 1.8; margin-bottom: 16px;">
+                    <li>Built and containerized a full-stack application with React, Node.js, and PostgreSQL using Docker and Docker Compose.</li>
+                    <li>Built an automated Jenkins CI pipeline incorporating security scanning tools: SonarQube for SAST code quality, Gitleaks for secret detection, and Trivy for container vulnerability checks.</li>
+                    <li>Configured automatic building and pushing of Docker images to Docker Hub registry upon successful pipeline completion.</li>
+                </ul>
+            </div>
+
+            <div class="card reveal delay-200" style="border-top: 8px solid var(--accent-purple); position: relative;">
+                <div class="card-tag" style="background: var(--accent-cyan);">K8S / CD</div>
+                <a href="https://github.com/jodyys/Track-App.git" target="_blank" class="github-link-top"><i class="fa-brands fa-github"></i></a>
+                <h3 style="font-size: 1.5rem; margin-bottom: 8px; padding-right: 32px;"><i class="fa-solid fa-route"></i> Track App</h3>
+                <ul style="font-family: var(--font-mono); font-size: 0.9rem; padding-left: 20px; line-height: 1.8; margin-bottom: 16px;">
+                    <li>Built end-to-end CI/CD pipelines using Jenkins for deployment to lightweight Kubernetes (K3s) environments.</li>
+                    <li>Deployed and managed application workloads in K3s cluster, ensuring proper ingress routing and resource isolation.</li>
+                    <li>Set up infrastructure monitoring using Prometheus and custom Grafana dashboards with Node Exporter for host metrics.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & CERTS SECTION -->
+    <section class="section-wrapper" id="education">
+        <h2 class="section-header reveal">005 // EDU_CERTS</h2>
+        <div class="grid-3">
+            <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-orange);">
+                <div class="card-tag" style="background: var(--bg-card); color: var(--border);">DEGREE</div>
+                
+                <h3 style="font-size: 1.2rem; margin-bottom: 8px;"><i class="fa-solid fa-graduation-cap"></i> Universitas Terbuka</h3>
+                <h4 style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 8px;">Bachelor's Degree, Sistem Informasi</h4>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 24px;">AUG 2026 - PRESENT</div>
+
+                <h3 style="font-size: 1.2rem; margin-bottom: 8px;"><i class="fa-solid fa-graduation-cap"></i> Universitas Bina Sarana Informatika</h3>
+                <h4 style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 8px;">Associate Degree in Information Systems</h4>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 4px;">AUG 2018 - NOV 2021</div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">GPA: 3.54 / 4.00</div>
+            </div>
+
+            <div class="card reveal delay-200" style="border-top: 8px solid var(--accent-cyan);">
+                <div class="card-tag" style="background: var(--accent-orange); color: white;">BOOTCAMP</div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 16px;"><i class="fa-solid fa-chalkboard-user"></i> Training Programs</h3>
+                <div style="margin-bottom: 12px;">
+                    <div style="font-family: var(--font-mono); font-weight: 700;">DigitalSkola</div>
+                    <div style="font-family: var(--font-mono); font-size: 0.8rem;">DevOps Engineer Intensive Program</div>
+                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #555;">JUL 2025 - SEP 2025</div>
+                </div>
                 <div>
-                    <h4 class="company-name">Universitas Terbuka</h4>
-                    <span class="role-title">Bachelor's Degree, Sistem Informasi</span>
-                </div>
-                <div class="exp-meta">
-                    <span class="location">Jakarta, Indonesia</span>
-                    <span class="dates">Aug 2026 – Present</span>
+                    <div style="font-family: var(--font-mono); font-weight: 700;">Orbit Future Academy</div>
+                    <div style="font-family: var(--font-mono); font-size: 0.8rem;">AWS re/Start Program</div>
+                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #555;">MAR 2026 - JUN 2026</div>
                 </div>
             </div>
 
-            <div class="exp-header">
-                <div>
-                    <h4 class="company-name">Universitas Bina Sarana Informatika</h4>
-                    <span class="role-title">Associate Degree in Information Systems</span>
-                </div>
-                <div class="exp-meta">
-                    <span class="location">Bekasi, Indonesia</span>
-                    <span class="dates">Aug 2018 – Nov 2021</span>
-                </div>
+            <div class="card reveal delay-300" style="border-top: 8px solid var(--accent-green);">
+                <div class="card-tag" style="background: var(--accent-cyan); color: var(--border);">BADGES</div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 16px;"><i class="fa-solid fa-award"></i> Certifications</h3>
+                <ul style="font-family: var(--font-mono); font-size: 0.85rem; padding-left: 20px; line-height: 1.8;">
+                    <li>AWS re/Start Graduate Badge</li>
+                    <li>Docker Foundations Professional</li>
+                    <li>DevOps Engineer Certification (DigitalSkola)</li>
+                </ul>
             </div>
-            <p class="gpa-text"><strong>GPA:</strong> 3.54 / 4.00</p>
-        </section>
+        </div>
+    </section>
 
-        <!-- COURSES & BOOTCAMPS -->
-        <section class="cv-section">
-            <h3 class="section-title"><i class="fa-solid fa-certificate no-print"></i> Courses & Training Programs</h3>
-            <div class="grid-2col">
-                <div class="course-card">
-                    <div class="course-header">
-                        <strong>DigitalSkola (Bootcamp)</strong>
-                        <span class="course-date">Jul 2025 – Sep 2025</span>
-                    </div>
-                    <p class="course-sub">DevOps Engineer Intensive Program | Bekasi, Indonesia</p>
-                </div>
-                <div class="course-card">
-                    <div class="course-header">
-                        <strong>Orbit Future Academy</strong>
-                        <span class="course-date">Mar 2026 – Jun 2026</span>
-                    </div>
-                    <p class="course-sub">AWS re/Start Program | Jakarta, Indonesia</p>
-                </div>
+    <!-- CONTACT SECTION -->
+    <section class="section-wrapper reveal delay-100" id="contact" style="margin-bottom: 100px;">
+        <div class="card" style="background: var(--accent-green); text-align: center;">
+            <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 16px; text-transform: uppercase;">Let's Connect</h2>
+            <p style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 24px;">Always open for new opportunities, collaborations, and discussions.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="mailto:devinjody@gmail.com" class="btn-brutal"><i class="fa-solid fa-envelope"></i> EMAIL ME</a>
+                <a href="https://linkedin.com/in/devinjodiyudanto" target="_blank" class="btn-brutal"><i class="fa-brands fa-linkedin"></i> LINKEDIN</a>
+                <a href="https://wa.me/6283872502379" target="_blank" class="btn-brutal"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CERTIFICATIONS -->
-        <section class="cv-section">
-            <h3 class="section-title"><i class="fa-solid fa-award no-print"></i> Certifications & Credentials</h3>
-            <ul class="cert-list">
-                <li><i class="fa-solid fa-shield-halved cert-icon"></i> <strong>AWS re/Start Graduate Badge</strong> –
-                    Amazon Web Services</li>
-                <li><i class="fa-solid fa-box cert-icon"></i> <strong>Docker Foundations Professional</strong> – Docker
-                    Inc.</li>
-                <li><i class="fa-solid fa-gears cert-icon"></i> <strong>DevOps Engineer Certification</strong> –
-                    DigitalSkola</li>
-            </ul>
-        </section>
-    </main>
+    <footer class="footer">
+        <div>DJ</div>
+        <div style="margin-top: 8px; font-size: 0.8rem; color: #ccc;">BUILT BY DEVIN JODIYUDANTO</div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
