@@ -23,26 +23,26 @@
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <a href="#hero" class="nav-brand">
-            <div class="nav-brand-dot"></div>
-            DJ
+            <span style="color: var(--accent-green); font-family: var(--font-mono); margin-right: 8px;">>_</span>DJ
         </a>
         
+        <div class="nav-menu" id="navMenu">
+            <a href="#about">ABOUT</a>
+            <a href="#skills">STACK</a>
+            <a href="#experience">EXP</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#education">EDU</a>
+            <a href="#contact" class="nav-connect-btn">
+                <span class="nav-status-blinker"></span> CONNECT
+            </a>
+        </div>
+
         <div class="nav-toggle" id="navToggle">
-            <span style="display: flex; align-items: center; gap: 8px;"><div style="width: 10px; height: 10px; background-color: var(--accent-green); border-radius: 50%;"></div> MENU</span>
             <div class="nav-toggle-icon">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-        </div>
-
-        <div class="nav-menu" id="navMenu">
-            <a href="#about">01 // ABOUT</a>
-            <a href="#skills">02 // STACK</a>
-            <a href="#experience">03 // EXP</a>
-            <a href="#projects">04 // PROJECTS</a>
-            <a href="#education">05 // EDU</a>
-            <a href="#contact" style="background: var(--accent-orange); color: var(--bg-primary); margin-top: 8px;">CONNECT</a>
         </div>
     </nav>
 
@@ -76,7 +76,7 @@
                     <div class="float-anim" style="background: var(--accent-green); border: var(--border-width) solid var(--border); box-shadow: var(--shadow-small); padding: 16px; border-radius: 12px; font-family: var(--font-mono); font-weight: 700;">
                         <div style="font-size: 0.8rem; margin-bottom: 8px; border-bottom: 2px solid var(--border); padding-bottom: 4px;">STATUS_CHECK</div>
                         <div style="font-size: 1.5rem; letter-spacing: -1px;"><i class="fa-solid fa-heart-pulse"></i> ALL SYSTEMS GO</div>
-                        <div style="font-size: 0.75rem; margin-top: 8px;">UPTIME: 99.99%</div>
+                        <div style="font-size: 0.75rem; margin-top: 8px;">STATUS: OPERATIONAL</div>
                     </div>
                 </div>
 
@@ -88,9 +88,9 @@
                     </div>
 
                     <div class="typo-headline">
-                        <h1>AUTOMATING &</h1>
-                        <h1><span class="highlight-box">SCALING</span></h1>
-                        <h1>INFRASTRUCTURE.</h1>
+                        <h1>ENGINEERING &</h1>
+                        <h1><span class="highlight-box">AUTOMATING</span></h1>
+                        <h1>CLOUD INFRASTRUCTURE.</h1>
                     </div>
 
                     <div class="typo-desc">
@@ -112,7 +112,7 @@
         <h2 class="section-header reveal">001 // ABOUT_ME</h2>
         <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-purple); font-size: 1.1rem; line-height: 1.8;">
             <p>
-                DevOps Engineer with hands-on experience managing Kubernetes environments on Google Kubernetes Engine (GKE) and Amazon EKS, CI/CD pipelines with Azure DevOps and Jenkins, and automating infrastructure using Docker and Ansible. Experienced in Kubernetes troubleshooting, infrastructure monitoring, Linux (Ubuntu) administration, and DevSecOps practices with cloud-native technologies.
+                I am a DevOps Engineer experienced in deploying and managing containerized workloads across multi-cloud Kubernetes environments, including GKE, EKS, and TKE. My core focus is on building reliable CI/CD pipelines, automating processes, and integrating DevSecOps practices to ensure secure application delivery. I am highly interested in system observability and continuously improving infrastructure reliability.
             </p>
         </div>
     </section>
@@ -186,12 +186,12 @@
                 <h3 style="font-size: 1.5rem; margin-bottom: 8px;">DevOps Engineer</h3>
                 <h4 style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 16px;">PT Link Net Tbk</h4>
                 <ul style="font-family: var(--font-mono); font-size: 0.9rem; padding-left: 20px; line-height: 1.8;">
-                    <li>Managed production Kubernetes clusters on Google Kubernetes Engine (GKE), Amazon EKS and Tencent Kubernetes Engine (TKE).</li>
+                    <li>Managed production Kubernetes clusters across GKE, EKS, and TKE.</li>
                     <li>Maintained and updated Azure DevOps CI/CD pipelines for application deployment.</li>
-                    <li>Collaborated with developers to resolve deployment issues and maintain application availability.</li>
-                    <li>Managed Kubernetes resources including Deployments, Services, Ingress, ConfigMaps, Secrets, and Azure Key Vault integration.</li>
+                    <li>Managed Kubernetes resources including Deployments, Services, Ingress, ConfigMaps, and Secrets.</li>
                     <li>Troubleshot production issues including CrashLoopBackOff, ImagePullBackOff, and CreateContainerConfigError.</li>
-                    <li>Performed Kubernetes operational support including rolling updates, pod restarts, deployment validation, and application configuration changes.</li>
+                    <li>Performed Kubernetes operational support including rolling updates, pod restarts, deployment validation, and configuration changes.</li>
+                    <li>Worked with Azure Key Vault and External Secrets for secure application configuration.</li>
                 </ul>
             </div>
             
@@ -212,7 +212,7 @@
 
     <!-- LAB PROJECTS SECTION -->
     <section class="section-wrapper" id="projects">
-        <h2 class="section-header reveal">004 // LAB_PROJECTS</h2>
+        <h2 class="section-header reveal">004 // PERSONAL_PROJECTS</h2>
         <div class="grid-2">
             <div class="card reveal delay-100" style="border-top: 8px solid var(--accent-cyan); position: relative;">
                 <div class="card-tag" style="background: var(--accent-green);">DEVSECOPS / CI</div>
@@ -290,14 +290,28 @@
             <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
                 <a href="mailto:devinjody@gmail.com" class="btn-brutal"><i class="fa-solid fa-envelope"></i> EMAIL ME</a>
                 <a href="https://linkedin.com/in/devinjodiyudanto" target="_blank" class="btn-brutal"><i class="fa-brands fa-linkedin"></i> LINKEDIN</a>
+                <a href="https://github.com/jodyys" target="_blank" class="btn-brutal"><i class="fa-brands fa-github"></i> GITHUB</a>
                 <a href="https://wa.me/6283872502379" target="_blank" class="btn-brutal"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div>DJ</div>
-        <div style="margin-top: 8px; font-size: 0.8rem; color: #ccc;">BUILT BY DEVIN JODIYUDANTO</div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">DJ</span>
+                <span class="footer-sys-msg">SYSTEM_OFFLINE // WAIT NO, WE'RE ONLINE</span>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">INIT</a>
+                <a href="https://github.com/jodyys" target="_blank"><i class="fa-brands fa-github"></i> GITHUB</a>
+                <a href="https://wa.me/6283872502379" target="_blank">PING</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 DEVIN JODIYUDANTO</span>
+            <span class="footer-status-blinker"></span>
+        </div>
     </footer>
 
     <script src="script.js"></script>
