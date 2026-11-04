@@ -699,6 +699,8 @@ a {
     box-shadow: var(--shadow);
     padding: 28px;
     position: relative;
+    min-width: 0;
+    max-width: 100%;
     transition: var(--transition);
 }
 
@@ -894,13 +896,13 @@ a {
 
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
 }
 
 .matrix-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
 }
 
@@ -912,6 +914,7 @@ a {
     display: flex;
     align-items: center;
     gap: 16px;
+    min-width: 0;
     transition: var(--transition);
 }
 
@@ -1066,6 +1069,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     gap: 18px;
+    min-width: 0;
 }
 
 .exp-bullets {
@@ -1099,7 +1103,7 @@ a {
    ========================================================================== */
 .grid-2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 26px;
 }
 
@@ -1108,6 +1112,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    min-width: 0;
 }
 
 .prj-topbar {
@@ -1117,6 +1123,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
     font-family: var(--font-mono);
     font-size: 0.76rem;
     font-weight: 700;
@@ -1136,6 +1144,8 @@ a {
 .prj-content {
     padding: 24px 26px;
     flex: 1;
+    min-width: 0;
+    width: 100%;
 }
 
 .prj-title {
@@ -1161,6 +1171,8 @@ a {
     font-family: var(--font-mono);
     font-size: 0.7rem;
     box-shadow: 4px 4px 0px var(--divider-dashed);
+    min-width: 0;
+    max-width: 100%;
 }
 
 .pipeline-title {
@@ -1898,7 +1910,7 @@ a {
     .about-bento,
     .exp-card,
     .grid-2 {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .typo-column {
@@ -1912,7 +1924,7 @@ a {
 
     .grid-3,
     .matrix-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -2080,13 +2092,13 @@ a {
     .about-pillars,
     .grid-3,
     .matrix-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     /* Stack Filter 2x2 Grid Mobile */
     .stack-filter-bar {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
     }
     .filter-tab {
@@ -2095,22 +2107,31 @@ a {
         text-align: center;
     }
 
-    /* Project Card Footer Mobile */
+    /* Project Card & Pipeline Mobile — 100% Equal Width */
     .prj-topbar {
         padding: 8px 14px;
-        font-size: 0.7rem;
+        font-size: 0.68rem;
     }
     .prj-title {
         font-size: 1.22rem;
+    }
+    .pipeline-steps {
+        flex-wrap: wrap;
+        gap: 5px;
+        overflow-x: visible;
     }
     .prj-footer {
         padding: 12px 15px;
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
+        width: 100%;
     }
     .prj-pills {
         width: 100%;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        gap: 6px;
     }
     .prj-actions {
         margin-left: 0;
