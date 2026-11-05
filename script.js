@@ -19,10 +19,10 @@ function toggleTheme() {
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
     if (isLight) {
         document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('portfolio-theme', 'dark');
+        localStorage.setItem('portfolio-theme-default-light', 'dark');
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('portfolio-theme', 'light');
+        localStorage.setItem('portfolio-theme-default-light', 'light');
     }
     syncThemeUI();
 }

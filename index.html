@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -26,8 +26,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script>
         (function () {
-            const saved = localStorage.getItem('portfolio-theme');
-            if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+            const saved = localStorage.getItem('portfolio-theme-default-light');
+            if (saved === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
         })();
     </script>
     <link rel="stylesheet" href="style.css">
@@ -67,8 +71,8 @@
                     </button>
 
                     <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Toggle color theme" title="Switch Light / Dark Theme">
-                        <i class="fa-solid fa-sun" id="themeIcon"></i>
-                        <span class="theme-toggle-label" id="themeLabel">LIGHT</span>
+                        <i class="fa-solid fa-moon" id="themeIcon"></i>
+                        <span class="theme-toggle-label" id="themeLabel">DARK</span>
                     </button>
                 </div>
 
